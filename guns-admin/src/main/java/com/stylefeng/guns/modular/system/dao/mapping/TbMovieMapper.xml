@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.TbMovieMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.TbMovie">
+        <id column="movie_id" property="movieId" />
+        <result column="movie_name" property="movieName" />
+        <result column="type_id" property="typeId" />
+        <result column="on_time" property="onTime" />
+        <result column="language" property="language" />
+        <result column="country" property="country" />
+        <result column="movie_time" property="movieTime" />
+        <result column="director" property="director" />
+        <result column="actor" property="actor" />
+        <result column="movie_img" property="movieImg" />
+        <result column="movie_video" property="movieVideo" />
+        <result column="profile" property="profile" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        movie_id, movie_name, type_id, on_time, language, country, movie_time, director, actor, movie_img, movie_video, profile
+    </sql>
+
+</mapper>

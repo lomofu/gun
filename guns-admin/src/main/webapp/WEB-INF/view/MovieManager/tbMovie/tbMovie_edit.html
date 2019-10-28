@@ -1,0 +1,37 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="movieId" name="电影ID" value="${item.movieId}" underline="true"/>
+                            <#input id="movieName" name="电影名" value="${item.movieName}" underline="true"/>
+                            <#input id="typeId" name="类型id" value="${item.typeId}" underline="true"/>
+                            <#input id="onTime" name="上映时间" value="${item.onTime}" underline="true"/>
+                            <#input id="language" name="语言类型" value="${item.language}" underline="true"/>
+                            <#input id="country" name="国家/地区" value="${item.country}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="movieTime" name="电影时长" value="${item.movieTime}" underline="true"/>
+                            <#input id="director" name="导演名" value="${item.director}" underline="true"/>
+                            <#input id="actor" name="演员" value="${item.actor}" underline="true"/>
+                            <#input id="movieImg" name="图片路径" value="${item.movieImg}" underline="true"/>
+                            <#input id="movieVideo" name="视频路径" value="${item.movieVideo}" underline="true"/>
+                            <#input id="profile" name="简介" value="${item.profile}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TbMovieInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TbMovieInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/MovieManager/tbMovie/tbMovie_info.js"></script>
+@}

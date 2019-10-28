@@ -1,0 +1,33 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="commentId" name="评论ID" value="${item.commentId}" underline="true"/>
+                            <#input id="movieId" name="电影ID参看Movie表" value="${item.movieId}" underline="true"/>
+                            <#input id="userId" name="用户ID参考User表" value="${item.userId}" underline="true"/>
+                            <#input id="content" name="内容" value="${item.content}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="createTime" name="时间" value="${item.createTime}" underline="true"/>
+                            <#input id="start" name="评分(从低到高 1-5)" value="${item.start}" underline="true"/>
+                            <#input id="state" name="删除与否(0-没删除,1-删除)" value="${item.state}" underline="true"/>
+                            <#input id="flag" name="" value="${item.flag}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TbMovieCommentInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TbMovieCommentInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/CommentManager/tbMovieComment/tbMovieComment_info.js"></script>
+@}

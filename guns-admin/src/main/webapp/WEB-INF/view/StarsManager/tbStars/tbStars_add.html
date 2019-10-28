@@ -1,0 +1,29 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="userId" name="用户Id" underline="true"/>
+                            <#input id="movieId" name="电影Id"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="state" name="收藏状态 0为收藏 1为取消收藏" underline="true"/>
+                            <#input id="createTime" name="收藏时间" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TbStarsInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TbStarsInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/StarsManager/tbStars/tbStars_info.js"></script>
+@}

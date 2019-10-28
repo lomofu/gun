@@ -1,0 +1,36 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="userId" name="用户id" underline="true"/>
+                            <#input id="userName" name="用户名" underline="true"/>
+                            <#input id="password" name="密码" underline="true"/>
+                            <#input id="sex" name="性别0男 1女 未添加是-1" underline="true"/>
+                            <#input id="age" name="年龄" underline="true"/>
+                            <#input id="userImg" name=""/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="email" name="邮箱" underline="true"/>
+                            <#input id="phone" name="电话" underline="true"/>
+                            <#input id="createTime" name="用户创建时间" underline="true"/>
+                            <#input id="state" name="登陆状态（‘0’未登陆 ，‘1’登陆状态）" underline="true"/>
+                            <#input id="userType" name="用户类型（‘0’普通用户 ‘1’超级管理员）" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TbUserInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TbUserInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/UserManager/tbUser/tbUser_info.js"></script>
+@}
